@@ -25,9 +25,9 @@ def check_winner() :
         return "0"
     if area[0][2] == "0" and area[1][2] == "0" and area[2][2] == "0" :
         return "0"
-    if area[0][0] == "0" and area[1][1] == "0" and area[2][2] == "0":
+    if area[0][0] == "0" and area[1][1] == "0" and area[2][2] == "0" :
         return "0"
-    if area[0][2] == "0" and area[1][1] == "0" and area[2][0] == "0":
+    if area[0][2] == "0" and area[1][1] == "0" and area[2][0] == "0" :
         return "0"
     return "*"
 

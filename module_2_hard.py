@@ -37,7 +37,32 @@
 """
 
 # Решение:
-	
+
+n = int(input("Введите число n (от 3 до 20): "))	
+
 def cypher() :
-	print(input("Введите в первое поле число n (от 3 до 20): "))
-#	for i in 
+#	print("Ok")
+	cypher_var = []
+	pair_numbers = []
+	for i in range(1, 21):			
+		for j in range(1, 21):
+			if n % (i + j) == 0 and i != j and set(pair_numbers) not in cypher_var :
+#				cypher_var = [i, j]	
+				pair_numbers.append(i)
+				pair_numbers.append(j)
+				cypher_var.append(pair_numbers)
+
+	
+#	if set(pair_numbers) not in cypher_var :
+		
+#	return(cypher_var)
+#	print(n, "-", *cypher_var)
+	print(n, "-", *pair_numbers)
+#				print(n, "-", i, j)
+	
+
+
+if n >= 3 and n <= 20 :
+	cypher()
+else:
+	print("Введенное число n выходит за пределы диапазона от 3 до 20")
